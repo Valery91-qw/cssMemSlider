@@ -28,4 +28,41 @@ body {
 .slider-controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.mem-description {
+    font-size: 3rem;
+}
+.slider-controls-bullet {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.slider-controls-bullet > li {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    background-color: darkgray;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    list-style-type: none;
+}
+.slider-controls-bullet > li > span {
+    width: 80%;
+    height: 80%;
+    background-color: darkgray;
+    border-radius: 50%;
+    border: 0.4rem solid black;
+}
+.slider-controls-bullet > li:hover > span {
+    background-color: black;
+    border: 0.4rem solid black;
+}
+.slider-controls-bullet > li:active > span {
+    background-color: darkgray;
+    border: 0.4rem solid darkgray;
 }
