@@ -1,0 +1,31 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overflow {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: darkgray;
+}
+.slider {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    background-image: url("./assets/mem1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+}
