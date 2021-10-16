@@ -25,6 +25,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 2rem;
+    transition: background 0.3s linear;
 }
 .slider-controls {
     display: flex;
@@ -53,17 +54,20 @@ body {
     list-style-type: none;
 }
 .slider-controls-bullet > li > span {
-    width: 80%;
-    height: 80%;
+    width: 65%;
+    height: 65%;
     background-color: darkgray;
     border-radius: 50%;
     border: 0.4rem solid black;
+    transition: 0.1s linear;
 }
 .slider-controls-bullet > li:hover > span {
     background-color: black;
     border: 0.4rem solid black;
+    transition: 0.1s linear;
 }
 .slider-controls-bullet > li:active > span {
     background-color: darkgray;
     border: 0.4rem solid darkgray;
+    transition: 0.1s linear;
 }
