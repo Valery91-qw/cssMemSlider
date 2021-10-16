@@ -13,20 +13,19 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 5rem;
     background-color: darkgray;
 }
 .slider {
     width: 100%;
     height: 80%;
     display: flex;
-    background-image: url("./assets/mem1.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     border-radius: 2rem;
     transition: background 0.3s linear;
+    overflow: hidden;
 }
+
+
 .slider-controls {
     display: flex;
     justify-content: space-between;
@@ -36,12 +35,13 @@ body {
 .mem-description {
     font-size: 3rem;
 }
+
 .slider-controls-bullet {
     padding: 0;
     margin: 0;
     display: flex;
 }
-.slider-controls-bullet > li {
+.slider-controls-bullet > input[type="radio"] {
     display: flex;
     width: 3rem;
     height: 3rem;
@@ -53,6 +53,8 @@ body {
     cursor: pointer;
     list-style-type: none;
 }
+
+
 .slider-controls-bullet > li > span {
     width: 65%;
     height: 65%;
@@ -60,6 +62,9 @@ body {
     border-radius: 50%;
     border: 0.4rem solid black;
     transition: 0.1s linear;
+}
+.slider-controls-bullet > li.active > span {
+    background-color: black;
 }
 .slider-controls-bullet > li:hover > span {
     background-color: black;
