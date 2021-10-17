@@ -1,3 +1,4 @@
+/* common styles */
 *,
 *:before,
 *:after {
@@ -23,7 +24,7 @@ input[type='radio'] {
     display: none;
 }
 
-/* Контейнер для слайдов и слайды */
+/* sliders container and themselves slides */
 .slider {
     width: 100%;
     height: 100%;
@@ -63,13 +64,14 @@ input[type='radio'] {
     background-size: 100% 100%;
 }
 
-/* Описание слайдов */
+/* slides descriptions */
 .slider-controls-description > span {
     display: none;
     font-size: 3rem;
+    height: 3rem;
 }
 
-/* лейблы для checkbox и контейнер */
+/*checkbox label */
 .slider-controls {
     margin-top: 2rem;
     width: 100%;
@@ -102,27 +104,31 @@ input[type='radio'] {
     border-radius: 50%;
     border: 0.3rem solid black;
 }
-.slider-controls-button:not(:active) {
+
+.slider-controls-button {
     background-color: white;
     border: 0.3rem solid white;
 }
+
+.slider-controls > div > label:hover > .slider-controls-button,
 .slider-controls-button:hover {
     background-color: black;
 }
+
 .slider-controls-button:active {
     background-color: black;
     border: 0.3rem solid black;
 }
-/* переключение слайдов и описания */
+/* changes slides */
 #mem4:checked ~ .slider > .slide4,
 #mem3:checked ~ .slider > .slide3,
 #mem2:checked ~ .slider > .slide2,
 #mem1:checked ~ .slider > .slide1 {
     display: block;
-    animation-name: from-right;
-    animation-duration: 0.3s;
+    animation-name: from-left;
+    animation-duration: 0.5s;
 }
-@keyframes from-right {
+@keyframes from-left {
     from {
         margin-left: 100%;
     }
@@ -130,33 +136,29 @@ input[type='radio'] {
         margin-left: 0;
     }
 }
-/* переключение описания */
+/* changes descriptions */
+#mem4:checked ~ .slider-controls > .slider-controls-description > .description4,
+#mem3:checked ~ .slider-controls > .slider-controls-description > .description3,
+#mem2:checked ~ .slider-controls > .slider-controls-description > .description2,
 #mem1:checked ~ .slider-controls > .slider-controls-description > .description1 {
     display: block;
+    animation-name: from-right;
+    animation-duration: 0.4s;
 }
-#mem2:checked ~ .slider-controls > .slider-controls-description > .description2{
-    display: block;
+@keyframes from-right {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 3rem;
+    }
 }
-#mem3:checked ~ .slider-controls > .slider-controls-description > .description3{
-    display: block;
-}
-#mem4:checked ~ .slider-controls > .slider-controls-description > .description4{
-    display: block;
-}
-/* стили для активных кнопок */
+/* changes active button */
+#mem4:checked ~ .slider-controls > div > label > .button4,
+#mem3:checked ~ .slider-controls > div > label > .button3,
+#mem2:checked ~ .slider-controls > div > label > .button2,
 #mem1:checked ~ .slider-controls > div > label > .button1 {
     background-color: black;
     border: 0.3rem solid black;
-}
-#mem2:checked ~ .slider-controls > div > label > .button2 {
-    background-color: black;
-    border: 0.3rem solid black;
-}
-#mem3:checked ~ .slider-controls > div > label > .button3 {
-    background-color: black;
-    border: 0.3rem solid black;
-}
-#mem4:checked ~ .slider-controls > div > label > .button4 {
-    background-color: black;
-    border: 0.3rem solid black;
+    transition: 0.3s linear;
 }
