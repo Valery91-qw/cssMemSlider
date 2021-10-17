@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 /* default checkbox */
 input[type='radio'] {
     display: none;
@@ -161,4 +162,36 @@ input[type='radio'] {
     background-color: black;
     border: 0.3rem solid black;
     transition: 0.3s linear;
+}
+
+@media (max-width: 870px){
+    .overflow {
+        padding: 1rem;
+    }
+    .slider-controls {
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+    }
+    .slider-controls-description > span {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        height: 1.5rem;
+    }
+    .slider-controls > div > label {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .slider-controls-button {
+        width: 1rem;
+        height: 1rem;
+    }
+    @keyframes from-right {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 1.5rem;
+        }
+    }
 }
