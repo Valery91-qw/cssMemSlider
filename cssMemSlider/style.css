@@ -163,7 +163,7 @@ input[type='radio'] {
     border: 0.3rem solid black;
     transition: 0.3s linear;
 }
-
+/* media */
 @media (max-width: 870px){
     .overflow {
         padding: 1rem;
