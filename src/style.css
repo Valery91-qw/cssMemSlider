@@ -8,71 +8,79 @@ body {
     width: 100%;
     height: 100%;
 }
-
 .overflow {
+    display: flex;
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
-    padding: 5rem;
+    padding: 2rem;
     background-color: darkgray;
-}
-.slider {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    border-radius: 2rem;
-    transition: background 0.3s linear;
-    overflow: hidden;
-}
-
-
-.slider-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-}
-.mem-description {
-    font-size: 3rem;
-}
-
-.slider-controls-bullet {
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-.slider-controls-bullet > input[type="radio"] {
-    display: flex;
-    width: 3rem;
-    height: 3rem;
-    background-color: darkgray;
-    margin-right: 1rem;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    cursor: pointer;
-    list-style-type: none;
+}
+/* Контейнер для слайдов и слайды */
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider > .slide1 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/mem1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.slider > .slide2 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/mem2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.slider > .slide3 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/mem3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.slider > .slide4 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/mem4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-
-.slider-controls-bullet > li > span {
-    width: 65%;
-    height: 65%;
-    background-color: darkgray;
-    border-radius: 50%;
-    border: 0.4rem solid black;
-    transition: 0.1s linear;
+/*лейблы для checkbox и контейнер */
+.slider-controls {
+    display: flex;
 }
-.slider-controls-bullet > li.active > span {
+.slider-controls > label {
+    width: 3rem;
+    height: 3rem;
     background-color: black;
+    margin-left: 1rem;
 }
-.slider-controls-bullet > li:hover > span {
-    background-color: black;
-    border: 0.4rem solid black;
-    transition: 0.1s linear;
+
+/* переключениеи */
+#mem1:checked ~ .slider > .slide1 {
+    display: block;
 }
-.slider-controls-bullet > li:active > span {
-    background-color: darkgray;
-    border: 0.4rem solid darkgray;
-    transition: 0.1s linear;
+
+#mem2:checked ~ .slider > .slide2 {
+    display: block;
+}
+
+#mem3:checked ~ .slider > .slide3 {
+    display: block;
+}
+
+#mem4:checked ~ .slider > .slide4 {
+    display: block;
 }
