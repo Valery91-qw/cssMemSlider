@@ -18,6 +18,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* default checkbox */
+input[type='radio'] {
+    display: none;
+}
+
 /* Контейнер для слайдов и слайды */
 .slider {
     width: 100%;
@@ -57,30 +62,46 @@ body {
     background-size: 100% 100%;
 }
 
-/*лейблы для checkbox и контейнер */
+/* Описание слайдов */
+.slider-controls-description > span {
+    display: none;
+}
+
+/* лейблы для checkbox и контейнер */
 .slider-controls {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-controls > div {
     display: flex;
 }
-.slider-controls > label {
+.slider-controls > div > label {
     width: 3rem;
     height: 3rem;
     background-color: black;
     margin-left: 1rem;
 }
 
-/* переключениеи */
-#mem1:checked ~ .slider > .slide1 {
+/* переключение */
+#mem1:checked ~ .slider > .slide1,
+#mem1:checked ~ .slider-controls > .slider-controls-description > .description1{
     display: block;
 }
 
-#mem2:checked ~ .slider > .slide2 {
+#mem2:checked ~ .slider > .slide2,
+#mem2:checked ~ .slider-controls > .slider-controls-description > .description2{
     display: block;
 }
 
-#mem3:checked ~ .slider > .slide3 {
+#mem3:checked ~ .slider > .slide3,
+#mem3:checked ~ .slider-controls > .slider-controls-description > .description3{
     display: block;
 }
 
-#mem4:checked ~ .slider > .slide4 {
+#mem4:checked ~ .slider > .slide4,
+#mem4:checked ~ .slider-controls > .slider-controls-description > .description4{
     display: block;
 }
